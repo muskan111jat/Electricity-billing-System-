@@ -1,33 +1,28 @@
-package electricity.billing.system;
+package system;
 import javax.swing.*;
 import java.awt.*;
 
 public class Splash extends JFrame {
     public Splash() {
-        ImageIcon imageIcon =new ImageIcon(getClass().getResource("/icon/splash/Splash.jpg"));
-        Image imageOne=imageIcon.getImage().getScaledInstance(600,400, Image.SCALE_DEFAULT);
-        JLabel imageLabel =new JLabel(imageIcon);
-        ImageIcon scaledIcon =new ImageIcon(imageOne);
-        JLabel imageLabel2 =new JLabel(scaledIcon);
-        add(imageLabel2);
+        ImageIcon imageIcon = new ImageIcon(getClass().getResource("/icon/splash/Splash.jpg"));
+        Image imageOne = imageIcon.getImage().getScaledInstance(600, 400, Image.SCALE_DEFAULT);
+        ImageIcon scaledIcon = new ImageIcon(imageOne);
+
+        JLabel imageLabel = new JLabel(scaledIcon);
+        add(imageLabel);
+        setSize(400,400);//
+        setLocation(500,200);//frame location x and y axis from top left or right
+        setVisible(true);// hamesha set visble neche he rahega iske upr sab images wala content ayegaa ,nichee rahega warna frame pr visible image ya jo bhii h visible nhi hogaa
         try{
-Thread.sleep(3000);
+Thread.sleep(3000);//frame will  hold for 2 sec then it will automatically close
 setVisible(false);
-        }
-        catch(Exception e){
+new Login();
+        } catch(Exception e){
         e.printStackTrace();
-
         }
-
-
-
-setSize(400,400);//
-setLocation(500,200);//
-setVisible(true);// hamesha set visble neche he rahega iske upr sab images wala content ayegaa ,nichee rahega warna frame pr visible image ya jo bhii h visible nhi hogaa
-
     }
     public static void main(String[] args) {
-    new Splash();//3.crested a splash object
+    new Splash();//3.created a splash object
     }
 
 }
