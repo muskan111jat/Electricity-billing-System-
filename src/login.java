@@ -54,7 +54,6 @@ class Login extends JFrame {
         add(SignupButton);
 
 
-
         ImageIcon profileOne = new ImageIcon(ClassLoader.getSystemResource("icon/splash/profile2.png"));//
         Image profileTwo = profileOne.getImage().getScaledInstance(250, 250, Image.SCALE_DEFAULT);
         // to scale image on frame or set it on frame
@@ -68,7 +67,7 @@ class Login extends JFrame {
         setLayout(null);//it means we have remove the default layout i.e-Border and set null there
         setVisible(true);
 
-}
+    }
 
 
     public static void main(String[] args) {
